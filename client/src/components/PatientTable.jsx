@@ -69,7 +69,7 @@ function EnhancedTable() {
 const handleDeleteClick = async (id) => {
   try {
     console.log(id);
-    const response = await axios.delete(`http://localhost:5000/patients/${id}`);
+    const response = await axios.delete("https://injury-tracking2.onrender.com/patients/${id}");
     if (response.status >= 200 && response.status <= 299) {
       setPatients(patients.filter(patient => patient.id !== id));
      // console.log(updatedPatients);
@@ -110,7 +110,7 @@ const handleDeleteClick = async (id) => {
   useEffect(()=>{
     const getPatients= async ()=>{
        try{
-        const res = await axios.get("http://localhost:5000/patients");
+        const res = await axios.get("https://injury-tracking2.onrender.com/patients");
         setPatients(res.data);
        }catch(err){
         console.log(err);

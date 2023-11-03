@@ -6,13 +6,14 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import PatientTable from "./components/PatientTable.jsx";
 import axios from "axios";
+<imp></imp>
 const App = () => {
   const [user, setUser] = useState(null);
   const [patients,setPatients]=useState([]);
   useEffect(()=>{
     const getPatients= async ()=>{
        try{
-        const res = await axios.get("http://localhost:5000/patients");
+        const res = await axios.get("https://injury-tracking2.onrender.com/patients");
         setPatients(res.data);
        }catch(err){
         console.log(err);
@@ -23,7 +24,7 @@ const App = () => {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("http://localhost:5000/auth/login/success", {
+      fetch("https://injury-tracking2.onrender.com/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -45,7 +46,6 @@ const App = () => {
     };
     getUser();
   }, []);
-
   return (
       <div className="app">
         <Navbar user={user} />

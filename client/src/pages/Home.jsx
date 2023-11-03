@@ -31,7 +31,7 @@ const handleSubmit=async (e)=>{
       y:markerPosition.y
     }
     try{
-      const res = await axios.post("http://localhost:5000/patients", newPatient);
+      const res = await axios.post("https://injury-tracking2.onrender.com/patients", newPatient);
       setPatients([...patients,res.data]);
       setSuccess(true);
     }catch(err){
@@ -42,7 +42,7 @@ const handleSubmit=async (e)=>{
     useEffect(()=>{
         const getPatients= async ()=>{
            try{
-            const res = await axios.get("http://localhost:5000/patients");
+            const res = await axios.get("https://injury-tracking2.onrender.com/patients");
             console.log(res);
             setPatients(res.data);
             console.log(res.data);

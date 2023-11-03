@@ -3,18 +3,19 @@ import Facebook from "../img/facebook.png";
 import Github from "../img/github.png";
 import { useRef, useState } from "react";
 import "./login.css";
+
 import axios from "axios";
 const Login = ({history}) => {
   const google = () => {
-    window.open("http://localhost:5000/auth/google", "_self");
+    window.open("https://injury-tracking2.onrender.com/auth/google", "_self");
   };
 
   const github = () => {
-    window.open("http://localhost:5000/auth/github", "_self");
+    window.open("https://injury-tracking2.onrender.com/auth/github", "_self");
   };
 
   const facebook = () => {
-    window.open("http://localhost:5000/auth/facebook", "_self");
+    window.open("https://injury-tracking2.onrender.com/auth/facebook", "_self");
   };
   const userRef= useRef();
   const emailRef= useRef();
@@ -36,7 +37,7 @@ const Login = ({history}) => {
       password:passwordRef.current.value
     }
     try{
-      await axios.post("http://localhost:5000/users/login",user1);
+      await axios.post("https://injury-tracking2.onrender.com/users/login",user1);
       history.push("http://localhost:3000");
 
  
@@ -52,7 +53,7 @@ const Login = ({history}) => {
       password:passwordRef.current.value
     }
     try{
-    await axios.post("http://localhost:5000/users/register",user);
+    await axios.post("https://injury-tracking2.onrender.com/users/register",user);
     setLogin(true);
     setSignup(false);
     setSuccessMessage(true);
