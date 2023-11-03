@@ -1,0 +1,18 @@
+.signup{
+    color: blue;
+    font-weight: 500;
+    padding-top: 15px;
+    cursor: pointer;
+}
+.submit{
+    cursor: pointer;
+}
+
+.success{
+    color: green;
+    padding-top:15px;
+}
+.failure{
+    color: red;
+    padding-top:15px;
+}

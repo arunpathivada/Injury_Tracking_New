@@ -1,0 +1,68 @@
+.Patientform{
+    position:absolute;
+    width: 220px;
+    height: 370px;
+    padding: 5px;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 2px;
+    background-color: lightgrey;
+   
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin:auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-width: 70px;
+   
+}
+.Patientform input{
+    padding: 5px;
+    margin-bottom: 2px;
+    border-radius: 3px ;
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+}
+.Patientform label{
+    color: red;
+    margin-bottom: 2px;
+    font-family: 400;
+}
+
+
+.Patientform button{
+    background-color:red;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 80px;
+    height: 30px;
+    margin-left: 60px;
+    margin-top: 5px;
+    margin-right: 50px;
+}
+
+.Patientform .failure{
+    color: red;
+    padding-top: 10px;
+    font-weight: 500;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.Patientform .success{
+    margin-top: 5px;
+    color:green;
+    font-weight: 500;
+    flex-direction: column;
+    margin-left: 30px;
+}
+.Patientform {
+    position: absolute;
+    top: 20px; /* Adjust this value as needed */
+    left: 20px; /* Adjust this value as needed */
+  }
+
